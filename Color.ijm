@@ -19,6 +19,7 @@ function processFolder(input){
 		if(File.isDirectory(input+list[i]))
 			processFolder("" + input + list[i]);
 		if(endsWith(list[i], suffix))
+			print("yes");
 			processFile(input, output, list[i]);
 	}
 }
@@ -38,13 +39,13 @@ title=file;
 getHistogram(values, counts, 256);
 lowerBound=0;
 upperBound=0;
- for (i=0; i<values.length; i++){
-     	print(values[i], counts[i]);
+Â for (i=0; i<values.length; i++){
+Â Â Â Â Â 	print(values[i], counts[i]);
 }
 
- for (i=0; i<values.length; i++){
+Â for (i=0; i<values.length; i++){
 	if(counts[i]>=50){
-     		//print(values[i], counts[i]);
+Â Â Â Â Â 		//print(values[i], counts[i]);
 		lowerBound=values[i];
 		print(lowerBound);
 		i=300;
